@@ -1,0 +1,89 @@
+import React from 'react';
+import loadable from 'react-loadable';
+
+function loading() {
+    return (
+        <div>
+            loading...
+        </div>
+    )
+}
+
+export default [
+    {
+        path:'/index',
+        component:loadable({
+            loader:()=>import('@/views/index'),
+            loading:loading
+        }),
+        routes:[
+            {
+                path:'/index/home',
+                component:loadable({
+                    loader:()=>import('@/views/index/home'),
+                    loading:loading
+                })
+            },{
+                path:'/index/dynamic',
+                component:loadable({
+                    loader:()=>import('@/views/index/dynamic'),
+                    loading:loading
+                })
+            },{
+                path:'/index/data',
+                component:loadable({
+                    loader:()=>import('@/views/index/data'),
+                    loading:loading
+                })
+            },{
+                path:'/index/message',
+                component:loadable({
+                    loader:()=>import('@/views/index/message'),
+                    loading:loading
+                })
+            },{
+                path:'/index/my',
+                component:loadable({
+                    loader:()=>import('@/views/index/my'),
+                    loading:loading
+                })
+            },{
+                from:'/index',
+                to:'/index/home'
+            }
+        ]
+    },{
+        path:'/login',
+        component:loadable({
+            loader:()=>import('@/views/login'),
+            loading:loading
+        })
+    },{
+        path:'/register',
+        component:loadable({
+            loader:()=>import('@/views/register'),
+            loading:loading
+        })
+    },{
+        path:'/allvote',
+        component:loadable({
+            loader:()=>import('@/views/allvote'),
+            loading:loading
+        })
+    },{
+        path:'/tovote',
+        component:loadable({
+            loader:()=>import('@/views/tovote'),
+            loading:loading
+        })
+    },{
+        path:'/votefor',
+        component:loadable({
+            loader:()=>import('@/views/votefor'),
+            loading:loading
+        })
+    },{
+        from:'/',
+        to:'/index'
+    }
+]

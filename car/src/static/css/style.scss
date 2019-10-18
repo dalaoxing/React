@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#root,
+.app {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.login,
+.register {
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    box-sizing: border-box;
+    h4 {
+        color: tomato;
+        text-align: center;
+        line-height: 44px;
+        font-size: 18px;
+    }
+    p {
+        margin: 20px auto;
+        width: 250px;
+        input {
+            width: 250px;
+            height: 32px;
+            border: 1px solid #ccc;
+            text-indent: 1em;
+            border-radius: 5px;
+        }
+    }
+    button {
+        display: block;
+        background: tomato;
+        width: 250px;
+        text-align: center;
+        line-height: 36px;
+        border: 0;
+        border-radius: 5px;
+        margin: 20px auto;
+        color: #fff;
+    }
+}
+
+.index {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    div:first-child {
+        flex: 1;
+    }
+    .foot {
+        width: 100%;
+        height: 44px;
+        display: flex;
+        border-top: 1px solid #ccc;
+        align-items: center;
+        p {
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+        }
+        .ave {
+            color: tomato;
+        }
+    }
+    .home {
+        .banner {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        .nav {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            dl {
+                width: 25%;
+                flex-shrink: 0;
+                text-align: center;
+                font-size: 14px;
+                margin: 10px 0;
+                path {
+                    fill: #1ca361;
+                }
+            }
+        }
+    }
+}
+
+.allvote {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .tap {
+        width: 100%;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        p {
+            width: 80px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            border: 1px solid tomato;
+            color: tomato;
+        }
+        .ave {
+            background: tomato;
+            color: #fff;
+        }
+    }
+    .list {
+        width: 100%;
+        flex: 1;
+        overflow-y: auto;
+        box-sizing: border-box;
+        padding: 0 20px;
+        dl {
+            width: 100%;
+            margin: 10px 0;
+            border-bottom: 1px solid tomato;
+            display: flex;
+            dt {
+                img {
+                    width: 100px;
+                }
+            }
+            dd {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                h4 {
+                    color: tomato;
+                }
+                p {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    white-space: nowrap;
+                    span:first-child {
+                        width: 150px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tovote {
+    width: 100%;
+    height: 100%;
+    .box {
+        box-sizing: border-box;
+        padding: 0 20px;
+        p {
+            margin-top: 10px;
+            line-height: 40px;
+            input {
+                width: 200px;
+                height: 32px;
+                border-radius: 5px;
+                border: 1px solid skyblue;
+                margin-left: 20px;
+            }
+            select {
+                width: 80px;
+                margin-left: 20px;
+            }
+        }
+        .textarea {
+            display: flex;
+            align-items: flex-start;
+            textarea {
+                width: 200px;
+                height: 80px;
+                border-radius: 5px;
+                border: 1px solid skyblue;
+                margin-left: 20px;
+            }
+        }
+        .its {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            input {
+                margin: 0;
+                width: 250px;
+            }
+            span {
+                color: tomato;
+            }
+        }
+    }
+    button {
+        width: 100%;
+        line-height: 44px;
+        background: tomato;
+        text-align: center;
+        color: #fff;
+        border: 0;
+        outline: none;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+}

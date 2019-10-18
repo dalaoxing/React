@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root,
+.app {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.login,
+.register {
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+.login h4,
+.register h4 {
+  color: tomato;
+  text-align: center;
+  line-height: 44px;
+  font-size: 18px;
+}
+
+.login p,
+.register p {
+  margin: 20px auto;
+  width: 250px;
+}
+
+.login p input,
+.register p input {
+  width: 250px;
+  height: 32px;
+  border: 1px solid #ccc;
+  text-indent: 1em;
+  border-radius: 5px;
+}
+
+.login button,
+.register button {
+  display: block;
+  background: tomato;
+  width: 250px;
+  text-align: center;
+  line-height: 36px;
+  border: 0;
+  border-radius: 5px;
+  margin: 20px auto;
+  color: #fff;
+}
+
+.index {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.index div:first-child {
+  flex: 1;
+}
+
+.index .foot {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  border-top: 1px solid #ccc;
+  align-items: center;
+}
+
+.index .foot p {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+}
+
+.index .foot .ave {
+  color: tomato;
+}
+
+.index .home .banner {
+  width: 100%;
+}
+
+.index .home .banner img {
+  width: 100%;
+}
+
+.index .home .nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.index .home .nav dl {
+  width: 25%;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.index .home .nav dl path {
+  fill: #1ca361;
+}
+
+.allvote {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.allvote .tap {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.allvote .tap p {
+  width: 80px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border: 1px solid tomato;
+  color: tomato;
+}
+
+.allvote .tap .ave {
+  background: tomato;
+  color: #fff;
+}
+
+.allvote .list {
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.allvote .list dl {
+  width: 100%;
+  margin: 10px 0;
+  border-bottom: 1px solid tomato;
+  display: flex;
+}
+
+.allvote .list dl dt img {
+  width: 100px;
+}
+
+.allvote .list dl dd {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.allvote .list dl dd h4 {
+  color: tomato;
+}
+
+.allvote .list dl dd p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+.allvote .list dl dd p span:first-child {
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tovote {
+  width: 100%;
+  height: 100%;
+}
+
+.tovote .box {
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.tovote .box p {
+  margin-top: 10px;
+  line-height: 40px;
+}
+
+.tovote .box p input {
+  width: 200px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid skyblue;
+  margin-left: 20px;
+}
+
+.tovote .box p select {
+  width: 80px;
+  margin-left: 20px;
+}
+
+.tovote .box .textarea {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tovote .box .textarea textarea {
+  width: 200px;
+  height: 80px;
+  border-radius: 5px;
+  border: 1px solid skyblue;
+  margin-left: 20px;
+}
+
+.tovote .box .its {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tovote .box .its input {
+  margin: 0;
+  width: 250px;
+}
+
+.tovote .box .its span {
+  color: tomato;
+}
+
+.tovote button {
+  width: 100%;
+  line-height: 44px;
+  background: tomato;
+  text-align: center;
+  color: #fff;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
