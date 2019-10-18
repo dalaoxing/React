@@ -1,43 +1,31 @@
-import React, { Component } from 'react';
-import {Login} from '@/api';
+import React,{Component} from 'react';
 
-export default class login extends Component {
+class Login extends Component{
     state={
         user:'',
         pwd:''
     }
-    render() {
+    render(){
         let {user,pwd}=this.state;
-        return (
-            <div className="login">
-                <h4>欢迎来到沐恩之家</h4>
-                <p><input type="text" placeholder="请输入用户名" value={user} name="user" onChange={this.changeName.bind(this)}/></p>
-                <p><input type="text" placeholder="请输入密码" value={pwd} name="pwd" onChange={this.changeName.bind(this)}/></p>
-                <button onClick={this.toLogin.bind(this)}>登陆</button>
-                <button onClick={this.toRegister.bind(this)}>注册</button>
-            </div>
-        )
+        return <div className="login">
+            <p><input type="text" onChange={this.toChange.bind(this)} value={user} name='user' placeholder="请输入用户名"/></p>
+            <p><input type="text" onChange={this.toChange.bind(this)} value={pwd} name='pwd' placeholder="请输入密码"/></p>
+            <button onClick={this.toUser.bind(this)}>登陆</button>
+        </div>
     }
-    changeName(e){
+    toChange(e){
         let keys=e.target.name;
-        let val=e.target.value;
-        this.setState({[keys]:val});       
+        this.setState({[keys]:e.target.value});
     }
-    async toLogin(){
+    toUser(){
         let {user,pwd}=this.state;
-        try{
-            let res = await Login({userName:user,password:pwd});
-            if(res.data.code===1){
-                localStorage.token=res.data.token;
-                localStorage.userId=res.data.userId;
-                this.props.history.go(-1);
-            }
-        }catch(err){
-            console.log(err.response); 
+        if(user==='jinzhou'&&pwd==='123456'){
+            localStorage.user='jinzhou';
+            this.props.history.go(-1);
+        }else{
+            alert('用户名或密码错误');
         }
-        
-    }
-    toRegister(){
-        this.props.history.push('/register')
     }
 }
+
+export default Login;

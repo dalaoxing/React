@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {BrowserRouter} from 'react-router-dom';
-import routes from './index.config';
+import routes from './router.config';
 import RouterView from './routerView';
 
-export default function router() {
-    return (
-        <BrowserRouter>
-            <RouterView routes={routes}/>
-        </BrowserRouter>
-    )
+export default class Router extends Component {
+    render() {
+        return (
+            <BrowserRouter>
+                <RouterView routes={routes}/>
+            </BrowserRouter>
+        )
+    }
 }
